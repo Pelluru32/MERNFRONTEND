@@ -24,6 +24,7 @@ const NotesList = () => {
     let filteredIds
     if (isAdmin || isManager) {
       filteredIds = [...ids]
+      console.log(filteredIds);
     } else {
       filteredIds = ids.filter(noteId => entities[noteId].username === username)
 

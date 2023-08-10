@@ -13,7 +13,7 @@ const EditUserForm = ({ user }) => {
   
   const [username, setUsername] = useState(user.username)
   const [password, setPassword] = useState("")
-  const [roles, setroles] = useState([user.roles])
+  const [roles, setroles] = useState(user.roles)
   const [active, setActive] = useState(user.active)
   const [c_pwd, setc_pwd] = useState(false)
   const [err,setErr]=useState("")
@@ -29,7 +29,7 @@ const EditUserForm = ({ user }) => {
     setroles(selectedOptions)
   }
   const OnDeleteUser=()=>{
-    deleteUser(user.id)
+    deleteUser({id:user.id})
   }
 
   useEffect(()=>{
