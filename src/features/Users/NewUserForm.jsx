@@ -16,7 +16,7 @@ const NewUserForm = () => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [validUN, setValidUN] = useState(false)
-    const [roles, setRoles] = useState(["Employee"])
+    const [roles, setRoles] = useState(["Mechanic"])
     const [validPWD,setValidPWD]=useState(false)
     const [err,setErr]=useState("")
 

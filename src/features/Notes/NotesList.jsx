@@ -4,7 +4,7 @@ import Note from './Note'
 import useAuth from '../../hooks/useAuth'
 
 const NotesList = () => {
-  const { username, isAdmin, isManager } = useAuth()
+  const { username, isAdmin, isChief_Mechanic } = useAuth()
 
   const { data: notes, isError, isLoading, isSuccess, error } = useGetNotesQuery('notesList', {
     pollingInterval: 15000,
@@ -22,7 +22,7 @@ const NotesList = () => {
     const { ids, entities } = notes
     
     let filteredIds
-    if (isAdmin || isManager) {
+    if (isAdmin || isChief_Mechanic) {
       filteredIds = [...ids]
       console.log(filteredIds);
     } else {

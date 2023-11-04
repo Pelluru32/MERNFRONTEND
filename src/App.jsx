@@ -51,7 +51,7 @@ const Rout = createBrowserRouter(
 
             <Route index element={<DashBody />} />
 
-            <Route element={<RequireAuth allowedRoles={[Roles.Admin,Roles.Manager]} />}>
+            <Route element={<RequireAuth allowedRoles={[Roles.Admin,Roles.Chief_Mechanic]} />}>
               <Route path="users">
                 <Route index element={<UsersList />} />
                 <Route path=":id" element={<EditUser />} />
