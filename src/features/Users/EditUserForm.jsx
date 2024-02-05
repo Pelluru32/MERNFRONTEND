@@ -41,7 +41,10 @@ const EditUserForm = ({ user }) => {
 
 },[isDelSuccess,navigate,isSuccess])
 
-
+const handleChangePwd=(e)=>{
+  e.preventDefault()
+  setc_pwd(prev => !prev)
+}
   const upadteSubmit = (e) => {
     e.preventDefault()
         const validU=UN_REGEX.test(username)
@@ -71,7 +74,7 @@ const EditUserForm = ({ user }) => {
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password</label>
               <div className="input-group mb-3">
-                <button className="btn btn-outline-primary btn-sm" onClick={() => setc_pwd(prev => !prev)}>Change Pwd</button>
+                <button className="btn btn-outline-primary btn-sm" onClick={handleChangePwd }>Change Pwd</button>
                 <input type="password" className="form-control" placeholder='Type New Pwd' id="password" value={password} onChange={e => setPassword(e.target.value)} disabled={!c_pwd} />
               </div>
             </div>
