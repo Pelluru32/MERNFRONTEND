@@ -3,7 +3,7 @@ import { setCredentials } from '../../features/Auth/authSlice'
 
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:3500',
+    baseUrl: 'https://mern-back-9uqu.onrender.com',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token
