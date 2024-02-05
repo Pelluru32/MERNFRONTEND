@@ -4,7 +4,7 @@ import { setCredentials } from '../../features/Auth/authSlice';
 
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://mechanicnote-api.onrender.com/',
+  baseUrl: 'https://mern-back-8xoq.onrender.com/',
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token
